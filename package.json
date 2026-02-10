@@ -1,0 +1,16 @@
+{
+  "name": "tillid-website",
+  "version": "1.0.0",
+  "description": "Tillid website with automated testing",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
