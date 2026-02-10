@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tillid Tech - Consulting Excellence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header */
+        header {
+            background-color: #4b5332;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #e5e7eb;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom right, #4b5332, #2d3b1f);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #f3f4f6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: white;
+            color: #4b5332;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #f3f4f6;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background-color: #f9fafb;
+        }
+        
+        .services h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #4b5332;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            color: #4b5332;
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #4b5332;
+        }
+        
+        .service-card p {
+            color: #4b5563;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            max-width: 48rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #4b5332;
+        }
+        
+        .about p {
+            font-size: 1.125rem;
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background-color: #4b5332;
+            color: white;
+        }
+        
+        .contact-content {
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .contact > .contact-content > p {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #f3f4f6;
+        }
+        
+        form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            color: #374151;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            color: #1f2937;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #4b5332;
+            box-shadow: 0 0 0 3px rgba(75, 83, 50, 0.1);
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #4b5332;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #3a4228;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        footer p {
+            color: #9ca3af;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="container">
+            <h1>Tillid Tech</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Consulting Excellence</h2>
+            <p>Transforming businesses through innovative technology solutions</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                    <h3>Strategic Consulting</h3>
+                    <p>Expert guidance to align technology with your business objectives and drive sustainable growth.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    <h3>Software Development</h3>
+                    <p>Custom software solutions built with cutting-edge technologies to meet your unique requirements.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h3>Digital Transformation</h3>
+                    <p>Modernize your infrastructure and processes to stay competitive in the digital age.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Tillid Tech</h2>
+                <p>
+                    We are a team of experienced technology consultants dedicated to helping businesses navigate the complex digital landscape. With a focus on innovation and excellence, we deliver tailored solutions that drive real results.
+                </p>
+                <p>
+                    Our approach combines deep technical expertise with a strong understanding of business strategy, ensuring that every solution we deliver creates lasting value for our clients.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2>Get In Touch</h2>
+            <p>Ready to transform your business? Contact us today to discuss your project.</p>
+            
+            <form method="POST" action="#" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you soon.'); this.reset();">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tillid Tech. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
