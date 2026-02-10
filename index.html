@@ -363,7 +363,7 @@
             <h2>Get In Touch</h2>
             <p>Ready to transform your business? Contact us today to discuss your project.</p>
             
-            <form>
+            <form method="POST" action="#" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you soon.'); this.reset();">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
