@@ -1,0 +1,16 @@
+{
+  "name": "tillid-website",
+  "version": "1.0.0",
+  "description": "Tillid website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "website",
+    "tillid"
+  ],
+  "author": "Tillid Tech",
+  "license": "MIT"
+}
