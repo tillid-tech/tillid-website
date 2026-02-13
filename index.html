@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tillid - Your trusted technology partner">
     <title>Tillid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -85,8 +88,59 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Tillid. All rights reserved.</p>
+        <div class="footer-container">
+            <!-- Top Section: Brand Name -->
+            <div class="footer-brand">
+                <h2>tillid</h2>
+            </div>
+
+            <!-- Middle Section: Three Columns -->
+            <div class="footer-middle">
+                <div class="footer-column footer-email">
+                    <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <a href="mailto:hello@tillid.tech">hello@tillid.tech</a>
+                </div>
+
+                <div class="footer-column footer-copyright">
+                    <p>&copy; 2024 tillid IT consulting</p>
+                </div>
+
+                <!-- Social media links - uncomment and update URLs when ready -->
+                <!--
+                <div class="footer-column footer-social">
+                    <a href="https://twitter.com/tillid" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/tillid" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/tillid" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://threads.net/@tillid" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.186 3.216c-2.088 0-3.96.793-5.28 2.112-1.32 1.32-2.112 3.192-2.112 5.28s.792 3.96 2.112 5.28c1.32 1.32 3.192 2.112 5.28 2.112s3.96-.792 5.28-2.112c1.32-1.32 2.112-3.192 2.112-5.28s-.792-3.96-2.112-5.28c-1.32-1.32-3.192-2.112-5.28-2.112zm0 1.824c1.608 0 3.048.624 4.128 1.704 1.08 1.08 1.704 2.52 1.704 4.128 0 1.248-.312 2.256-.768 3.12-.456.84-1.056 1.464-1.704 1.896-.456.312-.984.552-1.512.72v-5.664c-.024-1.056-.288-1.92-.816-2.592-.528-.672-1.32-1.008-2.184-.936-1.032.072-1.8.552-2.352 1.296-.552.744-.816 1.728-.816 2.856h1.656c0-.792.168-1.344.48-1.704.312-.36.696-.528 1.176-.576.48-.024.888.12 1.2.408.312.288.456.696.456 1.224v.528c-.6-.048-1.152-.048-1.68 0-.792.072-1.488.264-2.064.6-.576.336-1.032.792-1.344 1.368-.312.576-.48 1.248-.48 1.968 0 .696.144 1.32.432 1.872.288.552.696.984 1.224 1.296.528.312 1.152.456 1.872.456.792 0 1.488-.192 2.088-.576.312-.192.6-.432.864-.696.144.408.336.768.576 1.08h1.92c-.432-.504-.744-1.128-.912-1.848-.096-.432-.144-.912-.144-1.44v-3.912c.024-1.344.432-2.424 1.152-3.24.72-.816 1.776-1.272 3.096-1.272.864 0 1.656.168 2.352.504.696.336 1.296.816 1.776 1.44.48.624.864 1.368 1.104 2.232.24.864.36 1.8.36 2.808 0 1.296-.216 2.472-.648 3.528-.432 1.056-1.032 1.968-1.8 2.736-.768.768-1.68 1.368-2.736 1.8-1.056.432-2.232.648-3.528.648-1.296 0-2.472-.216-3.528-.648-1.056-.432-1.968-1.032-2.736-1.8-.768-.768-1.368-1.68-1.8-2.736-.432-1.056-.648-2.232-.648-3.528 0-1.296.216-2.472.648-3.528.432-1.056 1.032-1.968 1.8-2.736.768-.768 1.68-1.368 2.736-1.8 1.056-.432 2.232-.648 3.528-.648z"/>
+                        </svg>
+                    </a>
+                </div>
+                -->
+            </div>
+
+            <!-- Bottom Section: Legal Disclaimer -->
+            <div class="footer-disclaimer">
+                <p>By providing your mobile number, you consent to receive informational and marketing communications from tillid IT consulting. Message and data rates may apply. Your information will not be shared with third parties for their marketing purposes without your explicit consent.</p>
+            </div>
         </div>
     </footer>
 
