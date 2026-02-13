@@ -15,7 +15,6 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -25,48 +24,61 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h2>Welcome to Tillid</h2>
-                <p>Building innovative technology solutions</p>
-                <a href="#contact" class="cta-button">Get Started</a>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Us</h2>
-                <p>Tillid is a technology company focused on delivering cutting-edge solutions to modern challenges.</p>
+                <h2>Data and AI Consulting Solutions</h2>
+                <p>transforming data into business value</p>
             </div>
         </section>
 
         <section id="services" class="services">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="service-grid">
-                    <div class="service-card">
-                        <h3>Web Development</h3>
-                        <p>Modern, responsive websites built with the latest technologies.</p>
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <h3>Cloud and Data Infrastructure</h3>
+                    <p class="teaser">Building resilient cloud and data infrastructures that empower your business to scale and innovate</p>
+                    <div class="more-details" id="pipeline-details">
+                        <p>Cloud Architecture & Design</p>
+                        <p>Data Storage & Management</p>
+                        <p>Data Security & Compliance</p>
                     </div>
-                    <div class="service-card">
-                        <h3>Cloud Solutions</h3>
-                        <p>Scalable cloud infrastructure and deployment services.</p>
+                    <button class="discover-btn" onclick="toggleService('pipeline-details')">Discover More</button>
+                </div>
+
+                <div class="service-card">
+                    <h3>Data Engineering and Governance</h3>
+                    <p class="teaser">Transforming raw data into actionable insights through optimal engineering and compliance</p>
+                    <div class="more-details" id="realtime-details">
+                        <p>Data Pipeline Development</p>
+                        <p>Data Quality & Governance</p>
+                        <p>Real-Time Analytics</p>
                     </div>
-                    <div class="service-card">
-                        <h3>Consulting</h3>
-                        <p>Expert guidance for your technology initiatives.</p>
+                    <button class="discover-btn" onclick="toggleService('realtime-details')">Discover More</button>
+                </div>
+
+                <div class="service-card">
+                    <h3>Artificial Intelligence and Machine Learning</h3>
+                    <p class="teaser">Drive innovation with tailored AI and ML solutions designed to transform your business</p>
+                    <div class="more-details" id="analytics-details">
+                        <p>Machine Learning Model Development</p>
+                        <p>AI Strategy & Consulting</p>
+                        <p>Predictive Analytics</p>
                     </div>
+                    <button class="discover-btn" onclick="toggleService('analytics-details')">Discover More</button>
                 </div>
             </div>
         </section>
+   
+
 
         <section id="contact" class="contact">
             <div class="container">
                 <h2>Contact Us</h2>
                 <p>Ready to work together? Get in touch!</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                <form class="contact-form" id="contact-form">
+                    <input type="text" name="from_name" placeholder="Your Name" required>
+                    <input type="email" name="from_email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
+                    <div id="form-status"></div>
                 </form>
             </div>
         </section>
@@ -78,6 +90,7 @@
         </div>
     </footer>
 
+    <script src="toggleService.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

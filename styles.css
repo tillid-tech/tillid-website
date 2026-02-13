@@ -5,12 +5,15 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
+    --primary-color: #4B533A;
+    --secondary-color: #4B533A;
     --text-color: #1f2937;
     --light-bg: #f9fafb;
     --white: #ffffff;
     --gray: #6b7280;
+    --olive-green: #4B533A;
+    --action-red: #A65D57;
+    --card-text: #4B533A;
 }
 
 body {
@@ -62,7 +65,7 @@ nav {
 
 /* Main Content */
 main {
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
 .container {
@@ -73,26 +76,34 @@ main {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: var(--white);
-    padding: 8rem 2rem;
+    background: var(--white);
+    color: var(--text-color);
+    padding: 80px 2rem 60px 2rem;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--olive-green);
+    letter-spacing: -1px;
+    font-weight: 700;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--gray);
 }
 
 .cta-button {
     display: inline-block;
-    background-color: var(--white);
-    color: var(--primary-color);
+    background-color: var(--olive-green);
+    color: var(--white);
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -102,7 +113,8 @@ main {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(75, 83, 58, 0.3);
+    background-color: var(--action-red);
 }
 
 /* About Section */
@@ -125,42 +137,18 @@ main {
 
 /* Services Section */
 .services {
-    padding: 6rem 2rem;
+    padding: 80px 2rem 6rem 2rem;
+    background-color: var(--olive-green);
+    margin-top: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .services h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.service-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.service-card p {
-    color: var(--gray);
+    color: var(--white);
 }
 
 /* Contact Section */
@@ -173,6 +161,7 @@ main {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: var(--olive-green);
 }
 
 .contact > .container > p {
@@ -187,57 +176,278 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
+    padding: 1.2rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
     font-size: 1rem;
     font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--olive-green);
+    box-shadow: 0 0 0 3px rgba(75, 83, 58, 0.1);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
 }
 
 .contact-form button {
-    background-color: var(--primary-color);
+    background-color: var(--action-red);
     color: var(--white);
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(166, 93, 87, 0.3);
 }
 
 .contact-form button:hover {
-    background-color: var(--secondary-color);
+    background-color: #8f4e49;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(166, 93, 87, 0.4);
+}
+
+.contact-form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(166, 93, 87, 0.3);
+}
+
+#form-status {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+#form-status p {
+    margin: 0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: rgba(75, 83, 58, 0.05);
 }
 
 /* Footer */
 footer {
-    background-color: var(--text-color);
+    background-color: var(--olive-green);
     color: var(--white);
     padding: 2rem;
     text-align: center;
 }
 
+/* Services Grid Container */
+.services-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3-column grid on desktop */
+@media (min-width: 768px) {
+    .services-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Service Card Styling */
+.service-card {
+    background: var(--white);
+    border: 1px solid #eaeaea;
+    padding: 2rem;
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.service-card:hover {
+    box-shadow: 0 20px 40px rgba(166, 93, 87, 0.2);
+    transform: translateY(-8px);
+    border-color: var(--action-red);
+}
+
+.service-card h3 {
+    color: var(--card-text);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-card .teaser {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+/* Toggle Details Section */
+.more-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+.more-details.active {
+    max-height: 300px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Discover More Button */
+.discover-btn {
+    background: var(--action-red);
+    color: var(--white);
+    border: none;
+    padding: 0.875rem 2rem;
+    cursor: pointer;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(166, 93, 87, 0.3);
+}
+
+.discover-btn:hover {
+    background: #8f4e49;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(166, 93, 87, 0.4);
+}
+
+.discover-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(166, 93, 87, 0.35);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
     .nav-links {
         gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 1.5rem 50px 1.5rem;
     }
 
     .hero-content h2 {
         font-size: 2rem;
+        margin-top: 0;
+        letter-spacing: -0.5px;
     }
 
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
     }
 
-    .service-grid {
-        grid-template-columns: 1fr;
+    .cta-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* About Section */
+    .about {
+        padding: 4rem 1.5rem;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 60px 1.5rem 4rem 1.5rem;
+        margin-top: 0;
+    }
+
+    .services h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .services-container {
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .service-card .teaser {
+        font-size: 0.95rem;
+    }
+
+    .discover-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 4rem 1.5rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact > .container > p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-form {
+        gap: 1.25rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .contact-form button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 1.5rem;
     }
 }
